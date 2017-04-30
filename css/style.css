@@ -1,0 +1,161 @@
+/*font-family: 'Cabin', sans-serif;
+font-family: 'Old Standard TT', serif;*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+	background:#f1f1f1;
+}
+/*	Header 	*/
+.header{
+	width:100%;
+	height:80px;
+	border-bottom:1px solid;
+	display: block;
+	background:white;
+	padding:20px 0;
+}
+
+.header-item{
+	display: inline-block;
+	width:33%;
+	margin:0;
+	padding:0 20px;
+	font-size:31px;
+}
+
+.nav{
+	position: absolute;
+	top:78px;
+	background:white;
+	border:1px solid black;
+	font-family: 'Cabin', sans-serif;
+	font-size:30px;
+	text-align: center;
+	width:200px;
+}
+.nav-item{
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	height:50px;
+	line-height: 50px;
+	cursor: pointer;
+	transition:0.25s all;
+}
+
+			
+h1{
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+}
+
+.help{
+	text-align: right;
+}
+
+.help, .hamburger, .exit{
+	cursor: pointer;
+	transition:0.25s all;
+}
+
+.help:hover, .hamburger:hover, .exit:hover{
+	color:#E91E63;
+	transition:0.25s all;
+}
+/* Help view */
+.helpWrap{
+	border:1px solid #333;
+	background:white;
+	padding:20px;
+	position: absolute;
+	top:20vh;
+	max-width:500px;
+	font-family: 'Cabin', sans-serif;
+	left: 50%;
+	margin-left: -250px;
+	z-index: 3;
+}
+
+.helpWrap h2{
+	
+	font-weight:700;
+	font-size:25px;
+	text-align: center;
+	margin:0 0 20px 0;
+}
+
+.helpWrap p{
+	text-align: left;
+	line-height: 1.6;
+}
+
+.exit{
+	position: absolute;
+	cursor: pointer;
+	font-size: 28px
+}
+
+/*	Image option */
+
+.content{
+	max-width: 640px;
+	margin:50px auto;
+}
+
+.image-wrapper{
+	overflow: hidden;
+	height:426px;
+	width:100%;
+	z-index: 1;
+	position: relative;
+}
+
+.image{
+	width:100%;
+	position: absolute;
+	left:0;
+	top:0;
+	border:1px solid #333;
+}
+
+
+.buttons{
+	margin-top:-20px;
+	text-align: center;
+	z-index: 2;
+	position: relative;
+}
+
+.btn{
+	display: inline-block;
+	border:1px solid #333;
+	margin:0 5px;
+	width:80px;
+	padding:10px;
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition:0.25s all;
+	letter-spacing: 1px;
+	background:white;
+}
+
+.btn:hover, .nav-item:hover{
+	background:#E91E63;
+	color:white;
+	transition:0.25s all;
+}
+
+.btn.active{
+	background:#E91E63;
+	color:white;
+	cursor: default;
+}
