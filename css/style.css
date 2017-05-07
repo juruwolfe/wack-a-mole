@@ -1,6 +1,3 @@
-/*font-family: 'Cabin', sans-serif;
-font-family: 'Old Standard TT', serif;*/
-
 html {
   box-sizing: border-box;
 }
@@ -13,149 +10,166 @@ body{
 }
 /*	Header 	*/
 .header{
-	width:100%;
-	height:80px;
-	border-bottom:1px solid;
-	display: block;
-	background:white;
-	padding:20px 0;
-}
-
-.header-item{
-	display: inline-block;
-	width:33%;
-	margin:0;
-	padding:0 20px;
-	font-size:31px;
-}
-
-.nav{
-	position: absolute;
-	top:78px;
-	background:white;
-	border:1px solid black;
 	font-family: 'Cabin', sans-serif;
-	font-size:30px;
-	text-align: center;
-	width:200px;
-}
-.nav-item{
-	border-top:1px solid black;
-	border-bottom:1px solid black;
-	height:50px;
-	line-height: 50px;
-	cursor: pointer;
-	transition:0.25s all;
+    background: white;
+    border-bottom: 1px solid #333;
+    margin-bottom: 40px;
+    padding: 25px;
 }
 
-			
-h1{
+.header h1{
+	text-transform: uppercase;
 	text-align: center;
-	font-family: 'Cabin', sans-serif;
+	font-size: 72px;
+	padding: 14px 0;
+	margin-bottom: 15px;
 	font-weight: 700;
+	color:#333;
 }
 
-.help{
+h1 .first{
+	color:#3498db;
+}
+
+h1 .second{
+	color:#E91E63;
+}
+
+
+
+.header h2{
+	text-transform: uppercase;
+	text-align: center;
+	font-style: italic;
+	font-size:20px;
+}
+
+.points{
+	float:left;
+    text-align: center;
+}
+
+.points .number{
+	font-weight: 700;
+	font-size: 62px;
+	color:#3498db;
+}
+
+.lives{
+	float:right;
 	text-align: right;
 }
 
-.help, .hamburger, .exit{
-	cursor: pointer;
-	transition:0.25s all;
+.life-wrap{
+	padding:15px 0;
 }
 
-.help:hover, .hamburger:hover, .exit:hover{
+.life{
+	display: inline-block;
+	font-size:40px;
+	-webkit-text-stroke: 1px black;
+	color:white;
+}
+
+.life.full{
 	color:#E91E63;
-	transition:0.25s all;
 }
-/* Help view */
-.helpWrap{
-	border:1px solid #333;
-	background:white;
-	padding:20px;
-	position: absolute;
-	top:20vh;
-	max-width:500px;
-	font-family: 'Cabin', sans-serif;
-	left: 50%;
-	margin-left: -250px;
-	z-index: 3;
-}
+/*	Game Board 	*/
 
-.helpWrap h2{
-	
-	font-weight:700;
-	font-size:25px;
+.game-board{
+	max-width:660px;
 	text-align: center;
-	margin:0 0 20px 0;
-}
-
-.helpWrap p{
-	text-align: left;
-	line-height: 1.6;
-}
-
-.exit{
-	position: absolute;
-	cursor: pointer;
-	font-size: 28px
-}
-
-/*	Image option */
-
-.content{
-	max-width: 640px;
-	margin:50px auto;
-}
-
-.image-wrapper{
-	overflow: hidden;
-	height:426px;
-	width:100%;
-	z-index: 1;
+	margin:0 auto;
 	position: relative;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	  -moz-user-select: none;     /* Firefox all */
+	  -ms-user-select: none;      /* IE 10+ */
+	  user-select: none;  
 }
 
-.image{
-	width:100%;
-	position: absolute;
-	left:0;
-	top:0;
-	border:1px solid #333;
+.game-board:before{
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
+.mole-hole{
+	width: 150px;
+    height: 150px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 15px;
+    box-shadow: 1px 1px 8px #b3b3b3;
+    cursor: pointer;
+    background: white;
+    transition:all 0.25s;
+    text-align: center;
+}
 
-.buttons{
-	margin-top:-20px;
-	text-align: center;
-	z-index: 2;
-	position: relative;
+.mole-hole:before{
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.mole-hole:active{
+	box-shadow: 1px 1px 8px #b3b3b3 inset;
+	transition:all 0.25s;
+}
+
+.mole, .mouse{
+	background:#3498db;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius:50%;
+}
+
+.mouse{
+	background:#E91E63;
 }
 
 .btn{
 	display: inline-block;
-	border:1px solid #333;
-	margin:0 5px;
-	width:80px;
-	padding:10px;
+	margin: 0 5px;
+	width: 270px;
+	line-height: 1.3;
+	padding: 32px 0;
+	position: absolute;
+	padding: 21px;
+	font-size: 32px;
 	text-align: center;
 	font-family: 'Cabin', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	cursor: pointer;
-	transition:0.25s all;
+	transition: 0.25s all;
 	letter-spacing: 1px;
-	background:white;
+	background: white;
+	background: #3498db;
+	color: white;
+	box-shadow: 2px 2px #1c5c87;
+	top:50%;
+	left: 50%;
+	margin-left: -135px;
+	margin-top: -50px;
 }
 
-.btn:hover, .nav-item:hover{
-	background:#E91E63;
+.btn:hover{
+	background:#3498db;
 	color:white;
 	transition:0.25s all;
 }
 
-.btn.active{
-	background:#E91E63;
-	color:white;
-	cursor: default;
+.btn:active{
+	box-shadow: 2px 2px #1c5c87 inset;
+	transition:0.25s all;
 }
+
+
+
+
+
+
