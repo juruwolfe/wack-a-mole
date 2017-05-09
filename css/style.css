@@ -145,7 +145,6 @@ h1 .second{
 	font-weight: 700;
 	text-transform: uppercase;
 	cursor: pointer;
-	transition: 0.25s all;
 	letter-spacing: 1px;
 	background: white;
 	background: #3498db;
